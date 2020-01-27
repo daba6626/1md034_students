@@ -30,7 +30,7 @@ Create an index.html file which contains:
 	- [X] House Number (only allowing numbers in this field)
 	- [X] Gender (male, female, do not wish to provide as radio buttons)
 - [X] A button to place the order
-
+ 
 ## 03 CSS
 
 - [X] Create style.css and link to it from index.html
