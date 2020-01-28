@@ -23,16 +23,20 @@ body {
 
 .header {
     margin: 10px;
+    float: absolute;
+    overflow: hidden;
     
 }
 
 #header_img {
     opacity: 0.5;
+    width: 100%;
+    height: auto;
+    max-height: 750px;
+    
 }
 .burgers {
     
-
-   
 }
 
 
@@ -41,6 +45,11 @@ body {
     background-color: black;
     border: 5px dotted white;
     
+}
+
+#head_txt{
+    position: absolute;
+    padding: 75px;
 }
 
 #contact {
@@ -63,4 +72,8 @@ button {
 .table {
     margin: 0 auto;
     width: 75%;
+}
+
+#hej{
+     float: absolute;
 }
