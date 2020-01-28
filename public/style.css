@@ -21,6 +21,14 @@ body {
     font-weight: bold;
 }
 
+.header {
+    margin: 10px;
+    
+}
+
+#header_img {
+    opacity: 0.5;
+}
 .burgers {
     
 
