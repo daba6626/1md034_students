@@ -4,6 +4,7 @@ body {
     margin: 0 auto;
     padding: 5px;
     margin: 5px 10px;
+    
 }
 
 .allergies {
@@ -20,19 +21,22 @@ body {
     font-weight: bold;
 }
 
-burgers {
+.burgers {
+    
+
    
 }
+
 
 #burger_info {
     color: white;
     background-color: black;
-   
+    border: 5px dotted white;
     
 }
 
 #contact {
-
+    border: 5px dotted black;
 }
 
 button:hover {
