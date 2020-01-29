@@ -25,6 +25,7 @@ body {
     margin: 10px;
     float: absolute;
     overflow: hidden;
+    height: 600px;
     
 }
 
@@ -77,3 +78,55 @@ button {
 #hej{
      float: absolute;
 }
+
+.wrapper {
+
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 500px 500px 500px;
+    background-color: black;
+    color: #fff;
+    
+    
+}
+
+.box {
+     background-color: #444;
+     color: #fff;
+     border-radius: 5px;
+     padding: 20px;
+     font-size: 150%;
+
+}
+
+.mighty{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.original {
+
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.chicken {
+    grid-column: 3;
+    grid-row: 1;
+                     
+}
+
+.burgerA {
+     grid-column: 1 ;
+     grid-row: 2;
+     
+ }
+.burgerB {
+     grid-column: 2 ;
+     grid-row: 2;
+ }
+
+.burgerC {
+     grid-column: 3;
+     grid-row: 2;
+ }
