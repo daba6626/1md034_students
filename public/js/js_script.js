@@ -1,3 +1,9 @@
+document.getElementById('B1').innerHTML = "The Mighty Burger"
+document.getElementById('B2').innerHTML = "The Original Burger"
+document.getElementById('B3').innerHTML = "The Chickenator"
+document.getElementById('B4').innerHTML = "ITBurger"
+document.getElementById('B5').innerHTML = "DVBurger"
+
 function menuItem(name, beefType, ingredients, sauce, imgPath, kcal) {
     this.name = name;
     this.beefType = beefType;
