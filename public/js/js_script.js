@@ -6,7 +6,7 @@ document.getElementById('B5').innerHTML = "DVBurger"
 */
 
 
-function menuItem(name, beefType, ingredients, sauce, imgPath, kcal, gluten, lactose) {
+/*function menuItem(name, beefType, ingredients, sauce, imgPath, kcal, gluten, lactose) {
     this.name = name;
     this.beefType = beefType;
     this.ingredients = ingredients;
@@ -52,7 +52,7 @@ function menuItem(name, beefType, ingredients, sauce, imgPath, kcal, gluten, lac
     }
     
     
-};
+};*/
 /*
 function nameAndKcal(burger) {
 
@@ -60,7 +60,7 @@ function nameAndKcal(burger) {
         
 }*/
 
-let TheMightyBurger = new menuItem("The Mighty Burger", "Vegan Beef", "Lettuce, tomato, pickles and red onion", "Our own fantastic burger sauce", "https://s.yimg.com/ny/api/res/1.2/juOdnB3oVmo_.H22UBEf0A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/8b8533099e0ab53dee69547cc17e8be4", 490, true, false);
+/*let TheMightyBurger = new menuItem("The Mighty Burger", "Vegan Beef", "Lettuce, tomato, pickles and red onion", "Our own fantastic burger sauce", "https://s.yimg.com/ny/api/res/1.2/juOdnB3oVmo_.H22UBEf0A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/8b8533099e0ab53dee69547cc17e8be4", 490, true, false);
 
 let TheOriginalBurger = new menuItem("The Original Burger", "Original Beef", "Double Lettuce, tomato, and double cheese", "Our own fantastic burger sauce", "http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-4.png", 550, true, false);
 
@@ -70,7 +70,7 @@ let ITBurger = new menuItem("The IT-Burger", "Original beef", "Lettuce, mayo, na
 
 let DVBurger = new menuItem("The DV-Burger", "Vegan beef", "Red pickled onion, Garlic", "Our own fantastic burger sauce!", "https://media-cdn.tripadvisor.com/media/photo-s/10/63/f9/03/yuk-cheap-and-nasty-burger.jpg", 1890, false, false);
 
-let menu = [TheMightyBurger, TheOriginalBurger, TheChickenator, ITBurger, DVBurger];
+let menu = [TheMightyBurger, TheOriginalBurger, TheChickenator, ITBurger, DVBurger];*/
 
 /*let myElement = document.getElementById("myID");
 

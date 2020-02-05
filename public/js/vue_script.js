@@ -14,7 +14,7 @@ const vm = new Vue({
   el: '#myID',
   data: {
   	
-  	  menu: menu
+  	  food: food
         	
   }
 })
