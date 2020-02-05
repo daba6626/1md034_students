@@ -4,7 +4,7 @@
     <head>
       <link rel="stylesheet" type="text/css" href="style.css">
       <script src="js/js_script.js" defer></script>
-      <script src="js/vue_script.js"></script>
+      <script src="js/vue_script.js" defer></script>
       <script src="https://vuejs.org/js/vue.js"></script>
       <title>Burgerland!</title>
 
@@ -28,13 +28,28 @@
 
           <div class="row">
 
+            <div id="myID" >
+              <div v-for="(burgerProp, index) in menu">
+                <h3> {{ burgerProp.name }} </h3>
+                <img :src="burgerProp.imgPath" width="250" height="175">
+                <ul>
+                  <li>{{burgerProp.beefType}}</li>
+                  <li>{{burgerProp.ingredients}}</li>
+                  <li>{{burgerProp.sauce}}</li>
+                  <li>{{burgerProp.kcal + " kcal"}}</li>
+                  <li>{{burgerProp.allergene()}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--
             <div class="column"></div>
             <div class="column"></div>
             <div class="column"></div>
             <div class="column" ></div>
             <div class="column"></div>
-
-          </div>
+-->
+         
 
 
                     

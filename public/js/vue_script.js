@@ -1,12 +1,26 @@
 /*document.getElementById("myID").innerHTML = "Välj en burgare";
-const vm = new Vue({
+const v = new Vue({
   el: '#yID',
   data: {
     arbitraryVariableName: 'Välj en burgare'
   }
+})*/
+
+
+
+//let menu = [TheMightyBurger, TheOriginalBurger, TheChickenator, ITBurger, DVBurger];
+
+const vm = new Vue({
+  el: '#myID',
+  data: {
+  	
+  	  menu: menu
+        	
+  }
 })
 
-const vm = new Vue({ //TODO Change CONST VM TO CONST X ?
+
+/*const vm = new Vue({ //TODO Change CONST VM TO CONST X ?
   el: '#myID',
   data: {
   	B1: 'The Mighty Burger',
@@ -15,18 +29,8 @@ const vm = new Vue({ //TODO Change CONST VM TO CONST X ?
     B4: 'ITBurger',
     B5: 'DVBurger'
   }
-})
+  })*/
 
-let menu = [TheMightyBurger, TheOriginalBurger, TheChickenator, ITBurger, DVBurger];
-
-const vm = new Vue({
-  el: '#myID',
-  data: {
-  	
-  	menu
-  	
-  }
-})*/
 
 /*
 <div id="myID">
@@ -39,6 +43,5 @@ Välj en burgare
   </li>
  
  </div>  
+
 */
-
-

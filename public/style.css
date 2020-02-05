@@ -140,7 +140,17 @@ button {
 }
 
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+   
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+#myID {
+
+    display: grid;
+    grid-gap: 50px;
+    text-align: center;
+    grid-template-columns: 300px 300px 300px 300px 300px;
 }

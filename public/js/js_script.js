@@ -26,18 +26,39 @@ function menuItem(name, beefType, ingredients, sauce, imgPath, kcal, gluten, lac
       {
     	desc += "Contains Lactose";
       }
+      if (!this.gluten && !this.lactose){
+      desc+= "Contains no allergenes"
+        }
       return desc; 
       
-	    };	
+	  };
+
+    this.allergene = function () {
+        var desc = "";
+        if (this.gluten)
+        {
+    	      desc += "Contains Gluten";
+        }
+        if (this.lactose)
+        {
+    	      desc += "Contains Lactose";
+        }
+        if (!this.gluten && !this.lactose){
+            desc+= "Contains no allergenes"
+        }
+        return desc; 
+        
+        
+    }
     
     
 };
-
+/*
 function nameAndKcal(burger) {
 
     return burger.name + " " + burger.kcal + " " + "kcal";
         
-}
+}*/
 
 let TheMightyBurger = new menuItem("The Mighty Burger", "Vegan Beef", "Lettuce, tomato, pickles and red onion", "Our own fantastic burger sauce", "https://s.yimg.com/ny/api/res/1.2/juOdnB3oVmo_.H22UBEf0A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/8b8533099e0ab53dee69547cc17e8be4", 490, true, false);
 
@@ -64,6 +85,8 @@ for (i; i < 5; ++i)
     listItem.appendChild(textNode);
     myElement.appendChild(listItem);
 }*/
+
+/*
 let row = document.getElementsByClassName('column');
 let i = 0;
 for (i; i < menu.length; ++i)
@@ -128,5 +151,5 @@ for (i; i < menu.length; ++i)
     
     
     
-}
+}*/
 
