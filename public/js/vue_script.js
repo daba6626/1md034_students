@@ -1,4 +1,4 @@
-document.getElementById("myID").innerHTML = "Välj en burgare";
+/*document.getElementById("myID").innerHTML = "Välj en burgare";
 const vm = new Vue({
   el: '#yID',
   data: {
@@ -26,7 +26,7 @@ const vm = new Vue({
   	menu
   	
   }
-})
+})*/
 
 /*
 <div id="myID">
@@ -40,3 +40,5 @@ Välj en burgare
  
  </div>  
 */
+
+

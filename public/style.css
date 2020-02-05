@@ -130,3 +130,17 @@ button {
      grid-column: 3;
      grid-row: 2;
  }
+
+.column {
+  float: left;
+  width: 20%;
+  margin: 0 auto;
+  overflow: auto;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

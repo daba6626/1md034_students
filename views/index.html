@@ -1,142 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
   <section>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="js/js_script.js"></script>
-    <script src="js/vue_script.js"></script>
-    <script src="https://vuejs.org/js/vue.js"></script>
-    <title>Burgerland!</title>
+    <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="js/js_script.js" defer></script>
+      <script src="js/vue_script.js"></script>
+      <script src="https://vuejs.org/js/vue.js"></script>
+      <title>Burgerland!</title>
 
-    <meta charset="utf-8"/>
-  </head >
+      <meta charset="utf-8"/>
+    </head >
 
-     
-  <body>
-    <main>
-      <section class="header" >
-      <h1 id="head_txt">Welcome to Burgerland!</h1>
-      <img src="https://webcomicms.net/sites/default/files/clipart/157566/images-burgers-157566-8803738.jpg" id="header_img">
+    <body>
+      <header class="header" >
+        <h1 id="head_txt">Welcome to Burgerland!</h1>
+        <img src="https://webcomicms.net/sites/default/files/clipart/157566/images-burgers-157566-8803738.jpg" id="header_img">
+      </header>
+      <main>
+        <section class="Choose burger">
+          <h2>Which burger would you like to order?</h2>
+          <p>Here the user can choose which burger to order </p>
+
         </section>
-      <section class="Choose burger">
-        <h2>Which burger would you like to order?</h2>
-        <p>Here the user can choose which burger to order </p>
-      </section>
+        
+        <section class="burgers" id="burger_info">
 
 
+          <div class="row">
 
-          
-            <section class="burgers" id="burger_info">
-              <span id="burger_info">
-                <div class="wrapper">
-            <div class="mighty">
-              <th>The Mighty Burger</th>
-            </div>
-            <div class="original">
-              <th>The Original Burger</th>
-            </div>
-            <div class="chicken">
-              <th>The Chickenator</th>
-            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column" ></div>
+            <div class="column"></div>
 
-            <div class="burgerA">
-              <img src="https://s.yimg.com/ny/api/res/1.2/juOdnB3oVmo_.H22UBEf0A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/8b8533099e0ab53dee69547cc17e8be4" alt="Burger" title="The Mighty Burger" width="500" height="300">
-            </div>
-            
-            <div class="burgerB">
-              <img src="http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-4.png" alt="Burger" title="The Original Burger" width="300" height="180">
-              
-            </div>
-            <div class="burgerC"> <img src="http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-2.png" alt="Burger" title="The Chickenator" width="400" height="250"></div>
-            <div class="burgerDescA">
-              
-              <ul>
-                <section class="allergies">
-                  <li>Vegan beef (<span id="gluten">gluten</span>)</li>
-                </section>
-                <li>Lettuce, tomato, pickles and red onion</li>
-                <li>Our own fantastic vegan burger sauce</li>
-                <li>490 kcal</li>
-              </ul>
-            </div>
-            
-            <div class="burgerDescB">
-              <ul>
-                <section class="allergies">
-                  <li>Original beef (<span id="gluten">gluten</span>)</li>
-                </section>
-                <li>Double Lettuce, tomato, and double cheese</li>
-                <li>Our own fantastic burger sauce</li>
-                <li>550 kcal</li>
-              </ul>
-            </div>
-            
-            <div class="burgerDesC">
-              <li>Fried Chicken Fillet</li>
-              <li>Lettuce and mayo</li>
-              <section class="allergies">
-                <li>Our own fantastic  burger sauce (<span id="lactose">lactose</span>)</li>
-                <li>700 kcal</li>
-            </div>
-            
-          </wrapper>
-    </section>
-      <section id="contact">
-        <h2>Customer Contact Information</h2>
-        <p>Here the user can insert their contact and billing info</p>
-      
-      <section >
-        <span>
-        <h3>Delivery Information</h3>
-        <form>
-          <p>
-            <label for="fullname">Fullname</label><br>
-            <input type="text" id="fullname" name="fn" required="required" placeholder="First- and last name"/>
-          </p>
-          <p>
-            <label for="E-mail">E-mail</label><br>
-            <input type="e-mail" id="e-mail" name="em" required="required" placeholder="E-mail">
-          </p>
-          <p>
-            <label for="street">Street</label><br>
-            <input type="text" id="street" name="st" required="required" placeholder="Street">
-          </p>
-          <p>
-            <label for="house">House</label><br>
-            <input type="number" id="house" name="h" required="required" placeholder="House">
-          </p>
-          <p>
-            <label for="Payment Method">Payment Method</label><br />
-            <select id="payment method" name="pm">
-              <option>Credit Card</option>
-              <option selected="selected">Cash </option>
-              <option>Invoice</option>
-              <option>Installment</option>
-            </select>
-          </p>
-          <p>
-            
-            <label for="Gender">Gender</label><br />
-            <input type="radio" id="male" name="gender" required="required" placeholder="gender">
-            Male<br />
-            
-            
-            <input type="radio" id="female" name="gender" required="required" placeholder="gender">
-            Female<br />
-            
-            
-            
-            <input type="radio" id="do not wish to provide" name="gender" required="required" placeholder="gender" checked="checked">
-            Do not wish to specify <br />
-          </p>
-        </form>
-        </span>
+          </div>
+
+
+                    
+           <!-- <span id="burger_info">
+           <div class="wrapper">
+                 <div class="mighty">
+                   <th>The Mighty Burger</th>
+                 </div>
+                 <div class="original">
+                   <th>The Original Burger</th>
+                 </div>
+                 <div class="chicken">
+                   <th>The Chickenator</th>
+                 </div>
+
+                 <div class="burgerA">
+                   <img src="https://s.yimg.com/ny/api/res/1.2/juOdnB3oVmo_.H22UBEf0A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/8b8533099e0ab53dee69547cc17e8be4" alt="Burger" title="The Mighty Burger" width="500" height="300">
+                 </div>
+                 
+                 <div class="burgerB">
+                   <img src="http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-4.png" alt="Burger" title="The Original Burger" width="300" height="180">
+                   
+                 </div>
+                 <div class="burgerC"> <img src="http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-2.png" alt="Burger" title="The Chickenator" width="400" height="250"></div>
+                 <div class="burgerDescA">
+                   
+                   <ul>
+                     <section class="allergies">
+                       <li>Vegan beef (<span id="gluten">gluten</span>)</li>
+                     </section>
+                     <li>Lettuce, tomato, pickles and red onion</li>
+                     <li>Our own fantastic vegan burger sauce</li>
+                     <li>490 kcal</li>
+                   </ul>
+                 </div>
+                 
+                 <div class="burgerDescB">
+                   <ul>
+                     <section class="allergies">
+                       <li>Original beef (<span id="gluten">gluten</span>)</li>
+                     </section>
+                     <li>Double Lettuce, tomato, and double cheese</li>
+                     <li>Our own fantastic burger sauce</li>
+                     <li>550 kcal</li>
+                   </ul>
+                 </div>
+                 
+                 <div class="burgerDesC">
+                   <li>Fried Chicken Fillet</li>
+                   <li>Lettuce and mayo</li>
+                   <section class="allergies">
+                     <li>Our own fantastic  burger sauce (<span id="lactose">lactose</span>)</li>
+                     <li>700 kcal</li>
+                 </div>
+                 
+</wrapper>
+</section>
+-->
+<section id="contact">
+  <h2>Customer Contact Information</h2>
+  <p>Here the user can insert their contact and billing info</p>
   
-      </section>
-      <button type="submit">Place my order!<img src="http://www.clker.com/cliparts/z/Q/9/Y/Q/M/checkbox-checked-md.png" width="25" height="25"></button>
-    </main>
-    <footer>All rights reserved. Burgerland INC. </footer>
-  </body>
+  <section >
+    <span>
+      <h3>Delivery Information</h3>
+      <form>
+        <p>
+          <label for="fullname">Fullname</label><br>
+          <input type="text" id="fullname" name="fn" required="required" placeholder="First- and last name"/>
+        </p>
+        <p>
+          <label for="E-mail">E-mail</label><br>
+          <input type="e-mail" id="e-mail" name="em" required="required" placeholder="E-mail">
+        </p>
+        <p>
+          <label for="street">Street</label><br>
+          <input type="text" id="street" name="st" required="required" placeholder="Street">
+        </p>
+        <p>
+          <label for="house">House</label><br>
+          <input type="number" id="house" name="h" required="required" placeholder="House">
+        </p>
+        <p>
+          <label for="Payment Method">Payment Method</label><br />
+          <select id="payment method" name="pm">
+            <option>Credit Card</option>
+            <option selected="selected">Cash </option>
+            <option>Invoice</option>
+            <option>Installment</option>
+          </select>
+        </p>
+        <p>
+          
+          <label for="Gender">Gender</label><br />
+          <input type="radio" id="male" name="gender" required="required" placeholder="gender">
+          Male<br />
+          
+          
+          <input type="radio" id="female" name="gender" required="required" placeholder="gender">
+          Female<br />
+          
+          
+          
+          <input type="radio" id="do not wish to provide" name="gender" required="required" placeholder="gender" checked="checked">
+          Do not wish to specify <br />
+        </p>
+      </form>
+    </span>
+    
+  </section>
+  <button type="submit">Place my order!<img src="http://www.clker.com/cliparts/z/Q/9/Y/Q/M/checkbox-checked-md.png" width="25" height="25"></button>
+</main>
+<footer>All rights reserved. Burgerland INC. </footer>
+</body>
 </HTML>
 
 
