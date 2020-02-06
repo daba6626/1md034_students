@@ -23,29 +23,43 @@
           <p>Here the user can choose which burger to order </p>
 
         </section>
-        
+
         <section class="burgers" id="burger_info">
 
-
           <div class="row">
-
             <div id="myID" >
-              <div v-for="(burgerProp, index) in food">
+
+               <div  v-for="burgerProp in food" v-if="burgerProp.allergene">
                 <h3> {{ burgerProp.name }} </h3>
                 <img :src="burgerProp.imgPath" width="250" height="175">
-
-                  
+                
                 <ul>
                   <li>{{burgerProp.beeftype}}</li>
                   <li>{{burgerProp.ingredients}}</li>
                   <li>{{burgerProp.sauce}}</li>
                   <li>{{burgerProp.kcal + " kcal"}}</li>
+               
+                  <li>{{burgerProp.allergene}}</li>
+                </ul>
+               </div>
+
+              
+                <div v-else>
+                  <h3> {{ burgerProp.name }} </h3>
+                  <img :src="burgerProp.imgPath" width="250" height="175">
+                  
+                  <ul>
+                    <li>{{burgerProp.beeftype}}</li>
+                    <li>{{burgerProp.ingredients}}</li>
+                    <li>{{burgerProp.sauce}}</li>
+                    <li>{{burgerProp.kcal + " kcal"}}</li>
+                    
                  <!-- TO BE IMPLEMENTED
                       <li>{{burgerProp.lactose}}</li>
                       <li>{{burgerProp.gluten}} </li>
                   -->
-                </ul>
-              </div>
+                  </ul>
+                </div>
             </div>
           </div>
           <!--
@@ -166,7 +180,7 @@
     </span>
     
   </section>
-  <button type="submit">Place my order!<img src="http://www.clker.com/cliparts/z/Q/9/Y/Q/M/checkbox-checked-md.png" width="25" height="25"></button>
+  <button id="myBtn"type="submit">Place my order!<img src="http://www.clker.com/cliparts/z/Q/9/Y/Q/M/checkbox-checked-md.png" width="25" height="25"></button>
 </main>
 <footer>All rights reserved. Burgerland INC. </footer>
 </body>

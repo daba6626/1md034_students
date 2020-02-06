@@ -7,8 +7,9 @@ let food = [
       "sauce": "Our own fantastic burger sauce",
 
       "kcal": 490,
-      "lactose": true,
-      "gluten": false  
+      "allergene": "Contains lactose"
+      //"lactose": true,
+      //"gluten": false  
 
   },
     
@@ -19,8 +20,9 @@ let food = [
       "ingredients": "Double Lettuce, tomato, and double cheese",
       "sauce": "Our own fantastic burger sauce",
       "kcal": 550,
-      "lactose": true,
-        "gluten": false
+        "allergene": "Contains lactose"
+        //"lactose": true,
+      // "gluten": false
 
     },
       {
@@ -29,9 +31,10 @@ let food = [
       "beeftype": "Fried Chicken Fillet",
       "ingredients": "Lettuce and mayo", 
       "sauce": "Our own fantastic burger sauce",
-      "kcal": 700,
-      "lactose": false,
-      "gluten": true
+          "kcal": 700,
+          "allergene": "Contains gluten"
+      //"lactose": false,
+      //"gluten": true
 
   
       },
@@ -42,9 +45,10 @@ let food = [
       "beeftype": "Original Beef",
       "ingredients": "Lettuce, mayo, nachos, tomato, melted cheese and pickled onion",
       "sauce": "Without sauce",
-      "kcal": 1250,
-      "lactose": false,
-      "gluten": false
+          "kcal": 1250,
+          "allergene": "" 
+      //"lactose": false,
+      //"gluten": false
       
       },
 
@@ -54,9 +58,10 @@ let food = [
       "beeftype": "Vegan Beef",
       "ingredients": "Red pickled onion, Garlic",
       "sauce": "Our own fantastic burger sauce!",
-      "kcal": 1890,
-      "lactose": false,
-      "gluten": false
+          "kcal": 1890,
+          "allergene": ""
+      //"lactose": false,
+      //"gluten": false
      
       }
 ]

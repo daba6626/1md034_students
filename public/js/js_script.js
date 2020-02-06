@@ -153,3 +153,13 @@ for (i; i < menu.length; ++i)
     
 }*/
 
+function eventListener(){
+
+    document.getElementById("myBtn").addEventListener("click", "Button clicked!");
+    
+}
+displayDate
+function dataCollector(){
+
+    
+}
