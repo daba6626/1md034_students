@@ -32,7 +32,7 @@
                <div  v-for="burgerProp in food" v-if="burgerProp.allergene">
                 <h3> {{ burgerProp.name }} </h3>
                 <img :src="burgerProp.imgPath" width="250" height="175">
-                
+
                 <ul>
                   <li>{{burgerProp.beeftype}}</li>
                   <li>{{burgerProp.ingredients}}</li>
@@ -40,6 +40,8 @@
                   <li>{{burgerProp.kcal + " kcal"}}</li>
                
                   <li>{{burgerProp.allergene}}</li>
+                  <input type="checkbox" v-model="checkbox">
+
                 </ul>
                </div>
 
@@ -53,11 +55,13 @@
                     <li>{{burgerProp.ingredients}}</li>
                     <li>{{burgerProp.sauce}}</li>
                     <li>{{burgerProp.kcal + " kcal"}}</li>
+                    <input type="checkbox" v-model="checkbox">
+
                     
                  <!-- TO BE IMPLEMENTED
                       <li>{{burgerProp.lactose}}</li>
                       <li>{{burgerProp.gluten}} </li>
-                  -->
+                      -->
                   </ul>
                 </div>
             </div>
@@ -135,26 +139,27 @@
   <section >
     <span>
       <h3>Delivery Information</h3>
+      <div id="myBtn">
       <form>
         <p>
           <label for="fullname">Fullname</label><br>
-          <input type="text" id="fullname" name="fn" required="required" placeholder="First- and last name"/>
+          <input v-model="fullname" type="text" id="fullname" name="fn" required="required" placeholder="First- and last name"/>
         </p>
         <p>
           <label for="E-mail">E-mail</label><br>
-          <input type="e-mail" id="e-mail" name="em" required="required" placeholder="E-mail">
+          <input v-model="email" type="e-mail" id="e-mail" name="em" required="required" placeholder="E-mail">
         </p>
         <p>
           <label for="street">Street</label><br>
-          <input type="text" id="street" name="st" required="required" placeholder="Street">
+          <input v-model="street" type="text" id="street" name="st" required="required" placeholder="Street">
         </p>
         <p>
           <label for="house">House</label><br>
-          <input type="number" id="house" name="h" required="required" placeholder="House">
+          <input v-model="house" type="number" id="house" name="h" required="required" placeholder="House">
         </p>
         <p>
           <label for="Payment Method">Payment Method</label><br />
-          <select id="payment method" name="pm">
+          <select v-model="selected" id="payment method" name="pm">
             <option>Credit Card</option>
             <option selected="selected">Cash </option>
             <option>Invoice</option>
@@ -163,24 +168,33 @@
         </p>
         <p>
           
-          <label for="Gender">Gender</label><br />
-          <input type="radio" id="male" name="gender" required="required" placeholder="gender">
+          <label  for="Gender">Gender</label><br />
+          <input v-model="gender" type="radio" id="male" name="gender" value="male" required="required" placeholder="gender">
           Male<br />
           
           
-          <input type="radio" id="female" name="gender" required="required" placeholder="gender">
+          <input v-model="gender" type="radio" id="female" name="gender"  value="female" required="required" placeholder="gender">
           Female<br />
           
           
           
-          <input type="radio" id="do not wish to provide" name="gender" required="required" placeholder="gender" checked="checked">
+          <input v-model="gender" type="radio" id="do not wish to provide" name="gender" value="do not wish to provide" required="required" placeholder="gender" checked="checked">
           Do not wish to specify <br />
         </p>
       </form>
     </span>
     
   </section>
-  <button id="myBtn"type="submit">Place my order!<img src="http://www.clker.com/cliparts/z/Q/9/Y/Q/M/checkbox-checked-md.png" width="25" height="25"></button>
+  <button v-on:click="clickedBtn()" id="myBtn"type="submit">Place my order!<img src="http://www.clker.com/cliparts/z/Q/9/Y/Q/M/checkbox-checked-md.png" width="25" height="25">
+
+  
+  </button>
+
+  <div id="myBtn">
+     {{btn.output}}
+    </div>
+  </div>
+ 
 </main>
 <footer>All rights reserved. Burgerland INC. </footer>
 </body>

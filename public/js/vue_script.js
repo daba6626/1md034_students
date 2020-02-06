@@ -19,6 +19,28 @@ const vm = new Vue({
   }
 })
 
+const btn = new Vue({
+    el: '#myBtn',
+    data: {
+        fullname: "",
+        email: "",
+        street: "",
+        house: "",
+        selected: "",
+        gender: "",
+        output: ""
+        
+        
+    },
+    methods:{
+        clickedBtn: function(){
+            this.output = this.fullname + this.email + this.street + this.house + this.selected + this.gender;
+        }
+    }
+})
+
+
+
 
 /*const vm = new Vue({ //TODO Change CONST VM TO CONST X ?
   el: '#myID',

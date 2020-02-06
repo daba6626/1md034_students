@@ -153,13 +153,54 @@ for (i; i < menu.length; ++i)
     
 }*/
 
-function eventListener(){
+//let myButton = document.getElementById('myBtn');
+//myButton.addEventListener("click", eventListener);
 
-    document.getElementById("myBtn").addEventListener("click", "Button clicked!");
+/*function eventListener(){
+
+    console.log("Button clicked!");
     
-}
-displayDate
-function dataCollector(){
+    
+}*/
+
+function orderInfo(){
+    
+var fullname = document.getElementById("fullname").value;
+var email = document.getElementById("e-mail").value;
+var street = document.getElementById("street").value;
+var house = document.getElementById("house").value;
+var paymentMethod = document.getElementById("payment method").value;
+
+var gender = document.querySelector('input[name="gender"]:checked').value;
 
     
+let orderArray = [fullname, email, street, house, paymentMethod, gender];
+
+    //console.log(orderArray); 
+    return orderArray;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+    for (var i=0; i<3; i++)
+    {
+        if(radio[i].checked)
+        {
+        alert(radio[i].value)
+        break;
+        }
+    }
+*/
+
+//document.getElementById("myBtn").addEventListener("click", "Button clicked!");
