@@ -20,21 +20,31 @@ const vm = new Vue({
 })
 
 const btn = new Vue({
-    el: '#myBtn',
+    el: '#contact',
     data: {
         fullname: "",
         email: "",
         street: "",
         house: "",
-        selected: "",
-        gender: "",
+        pm:"Cash",
+        gender: "Female",
         output: ""
         
         
     },
     methods:{
         clickedBtn: function(){
-            this.output = this.fullname + this.email + this.street + this.house + this.selected + this.gender;
+           
+            this.output = this.fullname+ " " + this.email + " " + this.street + " " + this.house + " " + this.pm + " " + this.gender
+
+            let burger = document.getElementsByName('checkBurger');
+            for(var i = 0; i<burger.length; ++i)
+            {
+                if(burger[i].checked)
+                {
+                    this.output = this.output + " " +  burger[i].value;
+                }
+            }
         }
     }
 })
