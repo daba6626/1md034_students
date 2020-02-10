@@ -167,14 +167,12 @@ function orderInfo(){
     
 var fullname = document.getElementById("fullname").value;
 var email = document.getElementById("e-mail").value;
-var street = document.getElementById("street").value;
-var house = document.getElementById("house").value;
 var paymentMethod = document.getElementById("payment method").value;
 
 var gender = document.querySelector('input[name="gender"]:checked').value;
 
     
-let orderArray = [fullname, email, street, house, paymentMethod, gender];
+let orderArray = [fullname, email, paymentMethod, gender];
 
     //console.log(orderArray); 
     return orderArray;
