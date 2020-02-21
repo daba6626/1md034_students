@@ -32,24 +32,30 @@ const btn = new Vue({
         gender: "Female",
         output: "",
         orders: {},
+        details: {x: 0, y:0},
+        //orderId: "",
+        //orderItems: ""
         
         
         
     },
-    hej: {socket.on('initialize', function(data) {
-      this.orders = data.orders;
+    
+    
+    created: function() {socket.on('initialize', function(data) {
+        this.orders = data.orders;
     }.bind(this));
 
-    /* Whenever an addOrder is emitted by a client (every open map.html is
-     * a client), the server responds with a currentQueue message (this is
-     * defined in app.js). The message's data payload is the entire updated
-     * order object. Here we define what the client should do with it.
-     * Spoiler: We replace the current local order object with the new one. */
-    socket.on('currentQueue', function(data) {
-      this.orders = data.orders;
-    }.bind(this));
-},
-    methods:{
+          /* Whenever an addOrder is emitted by a client (every open map.html is
+           * a client), the server responds with a currentQueue message (this is
+           * defined in app.js). The message's data payload is the entire updated
+           * order object. Here we define what the client should do with it.
+           * Spoiler: We replace the current local order object with the new one. */
+          socket.on('currentQueue', function(data) {
+              this.orders = data.orders;
+          }.bind(this));
+                        },
+    methods: {
+    
         clickedBtn: function(){
            
             this.output = this.fullname+ " " + this.email + " " + this.street + " " + this.house + " " + this.pm + " " + this.gender
@@ -62,8 +68,8 @@ const btn = new Vue({
                     this.output = this.output + " " +  burger[i].value;
                 }
             }
-        }
-    },
+        },
+    
 
      getNext: function() {
       /* This function returns the next available key (order number) in
@@ -92,14 +98,33 @@ const btn = new Vue({
         },
         orderItems: ['Beans', 'Curry'],
       });
+    },
+
+    displayOrder: function(event) {
+      /* When you click in the map, a click event object is sent as parameter
+       * to the function designated in v-on:click (i.e. this one).
+       * The click event object contains among other things different
+       * coordinates that we need when calculating where in the map the click
+       * actually happened. */
+     //   let offset = {
+        a:  event.currentTarget.getBoundingClientRect().left
+        b: event.currentTarget.getBoundingClientRect().top
+              
+        this.details= {
+            x: event.clientX - 10 - offset.a,
+            y: event.clientY - 10 - offset.b,
+        };
+        
     }
+   // }
     
-})
+    }   
+});
 
 
 
 
-/*const vm = new Vue({ //TODO Change CONST VM TO CONST X ?
+/*const vm = new Vue({ 
   el: '#myID',
   data: {
   	B1: 'The Mighty Burger',

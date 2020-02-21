@@ -5,10 +5,11 @@
 const socket = io();
 
 /* eslint-disable-next-line no-unused-vars */
-const vm = new Vue({
+const vmm = new Vue({
   el: '#dots',
   data: {
-    orders: {},
+      orders: {}
+      
   },
   created: function() {
     /* When the page is loaded, get the current orders stored on the server.
