@@ -3,10 +3,12 @@
   <section>
     <head>
       <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="/socket.io/socket.io.js" defer></script>
       <script type="text/javascript" src="js/menu.js" defer></script>
       <script src="js/js_script.js" defer></script>
       <script src="js/vue_script.js" defer></script>
       <script src="https://vuejs.org/js/vue.js"></script>
+      
       <title>Burgerland!</title>
 
       <meta charset="utf-8"/>
@@ -29,7 +31,7 @@
           <div class="row">
             <div id="myID" >
 
-               <div  v-for="burgerProp in food" v-if="burgerProp.allergene">
+              <div  v-for="burgerProp in food" v-if="burgerProp.allergene">
                 <h3> {{ burgerProp.name }} </h3>
                 <img :src="burgerProp.imgPath" width="250" height="175">
 
@@ -38,99 +40,99 @@
                   <li>{{burgerProp.ingredients}}</li>
                   <li>{{burgerProp.sauce}}</li>
                   <li>{{burgerProp.kcal + " kcal"}}</li>
-               
+                  
                   <li>{{burgerProp.allergene}}</li>
-                 
+                  
                   <input name="checkBurger" type="checkbox" v-bind:value="burgerProp.name">
                 </ul>
-               </div>
+              </div>
 
               
-                <div v-else>
-                  <h3> {{ burgerProp.name }} </h3>
-                  <img :src="burgerProp.imgPath" width="250" height="175">
+              <div v-else>
+                <h3> {{ burgerProp.name }} </h3>
+                <img :src="burgerProp.imgPath" width="250" height="175">
+                
+                <ul>
+                  <li>{{burgerProp.beeftype}}</li>
+                  <li>{{burgerProp.ingredients}}</li>
+                  <li>{{burgerProp.sauce}}</li>
+                  <li>{{burgerProp.kcal + " kcal"}}</li>
                   
-                  <ul>
-                    <li>{{burgerProp.beeftype}}</li>
-                    <li>{{burgerProp.ingredients}}</li>
-                    <li>{{burgerProp.sauce}}</li>
-                    <li>{{burgerProp.kcal + " kcal"}}</li>
-                 
 
-                     <input name="checkBurger" type="checkbox" v-bind:value="burgerProp.name">
-                    <!-- TO BE IMPLEMENTED
-                      <li>{{burgerProp.lactose}}</li>
-                      <li>{{burgerProp.gluten}} </li>
-                      -->
-                  </ul>
-                </div>
+                  <input name="checkBurger" type="checkbox" v-bind:value="burgerProp.name">
+                  <!-- TO BE IMPLEMENTED
+                       <li>{{burgerProp.lactose}}</li>
+                  <li>{{burgerProp.gluten}} </li>
+                  -->
+                </ul>
+              </div>
             </div>
           </div>
 
           
           <!--
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column" ></div>
-            <div class="column"></div>
--->
-         
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column" ></div>
+              <div class="column"></div>
+              -->
+              
 
 
-                    
-           <!-- <span id="burger_info">
-           <div class="wrapper">
-                 <div class="mighty">
-                   <th>The Mighty Burger</th>
-                 </div>
-                 <div class="original">
-                   <th>The Original Burger</th>
-                 </div>
-                 <div class="chicken">
-                   <th>The Chickenator</th>
-                 </div>
+              
+              <!-- <span id="burger_info">
+                   <div class="wrapper">
+                     <div class="mighty">
+                       <th>The Mighty Burger</th>
+                     </div>
+                     <div class="original">
+                       <th>The Original Burger</th>
+                     </div>
+                     <div class="chicken">
+                       <th>The Chickenator</th>
+                     </div>
 
-                 <div class="burgerA">
-                   <img src="https://s.yimg.com/ny/api/res/1.2/juOdnB3oVmo_.H22UBEf0A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/8b8533099e0ab53dee69547cc17e8be4" alt="Burger" title="The Mighty Burger" width="500" height="300">
-                 </div>
-                 
-                 <div class="burgerB">
-                   <img src="http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-4.png" alt="Burger" title="The Original Burger" width="300" height="180">
-                   
-                 </div>
-                 <div class="burgerC"> <img src="http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-2.png" alt="Burger" title="The Chickenator" width="400" height="250"></div>
-                 <div class="burgerDescA">
-                   
-                   <ul>
-                     <section class="allergies">
-                       <li>Vegan beef (<span id="gluten">gluten</span>)</li>
-                     </section>
-                     <li>Lettuce, tomato, pickles and red onion</li>
-                     <li>Our own fantastic vegan burger sauce</li>
-                     <li>490 kcal</li>
-                   </ul>
-                 </div>
-                 
-                 <div class="burgerDescB">
-                   <ul>
-                     <section class="allergies">
-                       <li>Original beef (<span id="gluten">gluten</span>)</li>
-                     </section>
-                     <li>Double Lettuce, tomato, and double cheese</li>
-                     <li>Our own fantastic burger sauce</li>
-                     <li>550 kcal</li>
-                   </ul>
-                 </div>
-                 
-                 <div class="burgerDesC">
-                   <li>Fried Chicken Fillet</li>
-                   <li>Lettuce and mayo</li>
-                   <section class="allergies">
-                     <li>Our own fantastic  burger sauce (<span id="lactose">lactose</span>)</li>
-                     <li>700 kcal</li>
-                 </div>
-                 
+                     <div class="burgerA">
+                       <img src="https://s.yimg.com/ny/api/res/1.2/juOdnB3oVmo_.H22UBEf0A--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/8b8533099e0ab53dee69547cc17e8be4" alt="Burger" title="The Mighty Burger" width="500" height="300">
+                     </div>
+                     
+                     <div class="burgerB">
+                       <img src="http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-4.png" alt="Burger" title="The Original Burger" width="300" height="180">
+                       
+                     </div>
+                     <div class="burgerC"> <img src="http://demo.enpek.com/html-templates/foodmood/assets/images/product/themetidy-paira-framework-food-mood-responsive-html-template-product-2.png" alt="Burger" title="The Chickenator" width="400" height="250"></div>
+                     <div class="burgerDescA">
+                       
+                       <ul>
+                         <section class="allergies">
+                           <li>Vegan beef (<span id="gluten">gluten</span>)</li>
+                         </section>
+                         <li>Lettuce, tomato, pickles and red onion</li>
+                         <li>Our own fantastic vegan burger sauce</li>
+                         <li>490 kcal</li>
+                       </ul>
+                     </div>
+                     
+                     <div class="burgerDescB">
+                       <ul>
+                         <section class="allergies">
+                           <li>Original beef (<span id="gluten">gluten</span>)</li>
+                         </section>
+                         <li>Double Lettuce, tomato, and double cheese</li>
+                         <li>Our own fantastic burger sauce</li>
+                         <li>550 kcal</li>
+                       </ul>
+                     </div>
+                     
+                     <div class="burgerDesC">
+                       <li>Fried Chicken Fillet</li>
+                       <li>Lettuce and mayo</li>
+                       <section class="allergies">
+                         <li>Our own fantastic  burger sauce (<span id="lactose">lactose</span>)</li>
+                         <li>700 kcal</li>
+                     </div>
+                     
 </wrapper>
 </section>
 -->
@@ -138,14 +140,14 @@
   <h2>Customer Contact Information</h2>
   <p>Here the user can insert their contact and billing info</p>
   <section >
- 
+    
 
 
- 
-      <h3>Delivery Information</h3>
-     
-      <form>
-        <div id="myBtn">               
+    
+    <h3>Delivery Information</h3>
+    
+    <form>
+      <div id="myBtn">               
         <p>
           <label for="fullname">Fullname</label><br>
           <input v-model="fullname" type="text" id="fullname" name="fn" required="required" placeholder="First- and last name"/>
@@ -183,20 +185,30 @@
 
           Do not wish to specify <br />
         </p>
- 
- 
+        
+        
 
 
-   
- 
-  </div>   
-  <button v-on:click="clickedBtn()" id="myBtn" type="button">Place my order!<img src="http://www.clker.com/cliparts/z/Q/9/Y/Q/M/checkbox-checked-md.png" width="25" height="25">
- 
-  </button>
-<p>{{output}}</p>
+        
+        <div class="view-box">
+          <div id="dots" v-on:click="addOrder">
+            <div 
+              v-for="(order, key) in orders"
+              v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+              {{key}}
+            </div>
+          </div>
+        </div>
+
+      </div>   
+
+      <button v-on:click="clickedBtn()" id="myBtn" type="button">Place my order!<img src="http://www.clker.com/cliparts/z/Q/9/Y/Q/M/checkbox-checked-md.png" width="25" height="25">
+        
+      </button>
+      <p>{{output}}</p>
 
 
-  </form>
+    </form>
   </section> 
 </section>
 
