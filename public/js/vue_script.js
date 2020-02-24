@@ -35,13 +35,15 @@ const btn = new Vue({
                 T: false
                },
         orderCount: 0,
+        food: food,
+
         
     },
 
     methods:{
         clickedBtn: function(){
             
-            this.output = this.fullname+ " " + this.email + " " + this.street + " " + this.house + " " + this.pm + " " + this.gender
+            this.output = this.fullname+ " " + this.email + " " + this.pm + " " + this.gender
 
             let burger = document.getElementsByName('checkBurger');
             for(var i = 0; i<burger.length; ++i)
@@ -66,18 +68,28 @@ const btn = new Vue({
              * The click event object contains among other things different
              * coordinates that we need when calculating where in the map the click
              * actually happened. */
-
+            this.output = this.fullname+ " " + this.email + " " + this.pm + " " + this.gender
+            
+            let burger = document.getElementsByName('checkBurger');
+            for(var i = 0; i<burger.length; ++i)
+            {
+                if(burger[i].checked)
+                {
+                    this.output = this.output + " " +  burger[i].value;
+                }
+            }
             socket.emit('addOrder', {
                 orderId: this.getNext(),
                 details: {
                     x: this.order.details.x,
                     y: this.order.details.y,
                 },
-                orderItems: ['Beans', 'Curry'],
+                
+                orderItems: [this.output],
             });
         },
 
-         displayOrder: function(event) {
+        displayOrder: function(event) {
             /* When you click in the map, a click event object is sent as parameter
              * to the function designated in v-on:click (i.e. this one).
              * The click event object contains among other things different
@@ -88,13 +100,13 @@ const btn = new Vue({
                 y: event.currentTarget.getBoundingClientRect().top,
             };
             
-                //orderId: this.getNext(),
+            //orderId: this.getNext(),
 
-             this.order.details.x = event.clientX - 10 - offset.x,
-             this.order.details.y = event.clientY - 10 - offset.y,
-             this.order.showT = true
+            this.order.details.x = event.clientX - 10 - offset.x,
+            this.order.details.y = event.clientY - 10 - offset.y,
+            this.order.showT = true
             
-             console.log(event);
+            
         }
     }
 })

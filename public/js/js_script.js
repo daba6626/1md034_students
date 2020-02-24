@@ -172,7 +172,7 @@ var paymentMethod = document.getElementById("payment method").value;
 var gender = document.querySelector('input[name="gender"]:checked').value;
 
     
-let orderArray = [fullname, email, street, house, paymentMethod, gender];
+let orderArray = [fullname, email, paymentMethod, gender];
 
     //console.log(orderArray); 
     return orderArray;
