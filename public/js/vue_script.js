@@ -13,8 +13,7 @@ const socket = io();
 
 //let menu = [TheMightyBurger, TheOriginalBurger, TheChickenator, ITBurger, DVBurger];
 
-'use strict';
-const socket = io();
+
 
 const vm = new Vue({
 
